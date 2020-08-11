@@ -1,0 +1,95 @@
+<style>
+.container-placer {
+    /* position on the page */
+    z-index: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+
+}
+.embed-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.embed-container > * {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+    #fixedbutton {
+        position: fixed;
+        bottom: 40px;
+        height: 60px;
+        right: 40px; 
+        z-index:4;
+    }
+    #fixedbutton2 {
+        position: fixed;
+        height: 60px;
+        bottom: 110px;
+        right: 40px; 
+        z-index:4;
+    }
+    #fixedbutton3 {
+        position: fixed;
+        height: 60px;
+        bottom: 60px;
+        left: 40px; 
+        z-index:4;
+    }
+    
+   </style>
+    <a href="#head"><img src="nextIcon.png" id="fixedbutton"></a>
+    <a href="#head"><img src="homeIcon.png" id="fixedbutton2"></a>
+    <a href="#head"><img src="backIcon.png" id="fixedbutton3"></a>
+    <div class="container-placer">
+        <div class="embed-container">
+            <iframe id='sequencing' src=''></iframe>
+        </div>
+    </div>
+
+   
+   <script>
+
+
+
+   var sites=['https://i.simmer.io/@zane_mechem/sectioncrawler','https://i.simmer.io/@zane_mechem/test-poparc','https://zanemechem.github.io/gallerytest/index.html','https://planball.github.io/game/'];
+   site=0;
+
+   document.getElementById("fixedbutton").onclick = function() {iSequencer(); resetTimer();};
+   document.getElementById("fixedbutton3").onclick = function() {bSequencer(); resetTimer();};
+
+   document.getElementById('sequencing').src=sites[0];
+
+    var timerHandle = setTimeout(function(){iSequencer();},50000);
+    function resetTimer() {
+        window.clearTimeout(timerHandle);
+        timerHandle = setTimeout(function(){iSequencer();},50000);
+        
+        
+    }
+    function iSequencer(){
+
+      site++;
+      if (site>=sites.length){site=0};
+      document.getElementById('sequencing').src=sites[site];
+      resetTimer();
+    }
+    function bSequencer(){
+
+site--;
+if (site<=-1){site=sites.length-1};
+document.getElementById('sequencing').src=sites[site];
+resetTimer();
+}
+   
+
+   
+   </script>
