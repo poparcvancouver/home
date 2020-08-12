@@ -140,11 +140,11 @@
     </div>
     -->
     <div class="multiPurposeContainer" id = "Menue">
-        <button class="gameButton" id="1">Shean , </button>
-        <button class="gameButton" id="2">Giller , </button>
-        <button class="gameButton" id="3">Sarah , </button>
-        <button class="gameButton" id="4">Michael , </button>
-        <button class="gameButton" id="5">Judy , </button>
+        <button class="gameButton" id="1">Selena Ge , </button>
+        <button class="gameButton" id="2">Bill W , </button>
+        <button class="gameButton" id="3">Christine G , </button>
+        <button class="gameButton" id="4">Jimmy W , </button>
+        <button class="gameButton" id="5">Test , </button><!--
         <button class="gameButton" id="6">Jim , </button>
         <button class="gameButton" id="7">Janice , </button>
         <button class="gameButton" id="8">Jack , </button>
@@ -160,7 +160,7 @@
         <button class="gameButton" id="18">gallery test , </button>
         <button class="gameButton" id="19">test-poparc , </button>
         <button class="gameButton" id="20">gallery test , </button>
-
+        -->
     </div>
 
 
@@ -204,7 +204,7 @@
  
     
     function ChangeColors(){
-        for (i = 1; i <= 20; i++) {
+        for (i = 1; i <= 5; i++) {
             var colorTemp = Math.floor(Math.random() * amountOfColors);
             var idTemp = i.toString();
 
@@ -218,7 +218,7 @@
 
 
 
-    var sites = ['https://i.simmer.io/@zane_mechem/sectioncrawler', 'https://i.simmer.io/@zane_mechem/test-poparc', 'https://zanemechem.github.io/gallerytest/index.html', 'https://planball.github.io/game/'];
+    var sites = ['https://i.simmer.io/@Selena/objects', 'https://i.simmer.io/@LockLock/project-1', 'https://i.simmer.io/@Christineee/christine', 'https://i.simmer.io/@Jimmywzh/project-1', 'https://i.simmer.io/@Jimmywzh/project-1','https://simmer.io/@zane_mechem/test-poparc'];
     site = 0;
 
     document.getElementById("fixedbutton").onclick = function () { iSequencer(); resetTimer(); };
@@ -230,7 +230,7 @@
     document.getElementById("2").onclick = function () { site = 1; jumpToGame(); resetTimer(); };
     document.getElementById("3").onclick = function () { site = 2; jumpToGame(); resetTimer(); };
     document.getElementById("4").onclick = function () { site = 3; jumpToGame(); resetTimer(); };
-    document.getElementById("5").onclick = function () { site = 4; jumpToGame(); resetTimer(); };
+    document.getElementById("5").onclick = function () { site = 4; jumpToGame(); resetTimer(); };/*
     document.getElementById("6").onclick = function () { site = 5; jumpToGame(); resetTimer(); };
     document.getElementById("7").onclick = function () { site = 6; jumpToGame(); resetTimer(); };
     document.getElementById("8").onclick = function () { site = 7; jumpToGame(); resetTimer(); };
@@ -245,7 +245,7 @@
     document.getElementById("17").onclick = function () { site = 16; jumpToGame(); resetTimer(); };
     document.getElementById("18").onclick = function () { site = 17; jumpToGame(); resetTimer(); };
     document.getElementById("19").onclick = function () { site = 18; jumpToGame(); resetTimer(); };
-    document.getElementById("20").onclick = function () { site = 19; jumpToGame(); resetTimer(); };
+    document.getElementById("20").onclick = function () { site = 19; jumpToGame(); resetTimer(); };*/
 
 
     document.getElementById('sequencing').src = sites[0];
