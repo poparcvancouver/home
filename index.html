@@ -1,95 +1,291 @@
 <style>
-.container-placer {
-    /* position on the page */
-    z-index: 0;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    bottom: 0;
-    left: 0;
+    .grid-container {
+        /*display: grid;*/
+        /*grid-template-columns: auto auto auto;*/
+        background-color: #3b3b3b31;
+        padding: 50px;
+        z-index: 10;
 
-}
-.embed-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-.embed-container > * {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
+        padding: 10px, 0px;
+
+        text-align: center;
+        z-index: 10;
+    }
+
+    .gameButton {
+        background-color: #ffffff00;
+        /* Green */
+        border: 4px solid rgba(255, 255, 255, 0);
+        color: white;
+        padding: 0px 0px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        font-family: VT323, monospace;
+
+
+    }
+
+    .container-placer {
+        /* position on the page */
+        z-index: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    .embed-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .embed-container>* {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .multiPurposeContainer {
+
+        position: fixed;
+        background-color: #ffffff49;
+        padding: 3%;
+        z-index: 10;
+        left: 30%;
+        right: 30%;
+        top: 10%;
+        text-align: center;
+        border: 4px solid rgb(255, 255, 255);
+    }
+
+    /* FONTS */
+    .mainFont {
+        font-family: VT323, monospace;
+        color: rgb(183, 0, 255);
+        text-align: center;
+
+    }
+
     #fixedbutton {
         position: fixed;
-        bottom: 40px;
+        top: 40px;
         height: 60px;
-        right: 40px; 
-        z-index:4;
+        right: 40px;
+        z-index: 4;
     }
+
     #fixedbutton2 {
         position: fixed;
         height: 60px;
-        bottom: 110px;
-        right: 40px; 
-        z-index:4;
+        top: 110px;
+        right: 40px;
+        z-index: 4;
     }
+
     #fixedbutton3 {
         position: fixed;
         height: 60px;
-        bottom: 60px;
-        left: 40px; 
-        z-index:4;
+        top: 60px;
+        left: 40px;
+        z-index: 4;
     }
-    
-   </style>
-    <a href="#head"><img src="nextIcon.png" id="fixedbutton"></a>
-    <a href="#head"><img src="homeIcon.png" id="fixedbutton2"></a>
-    <a href="#head"><img src="backIcon.png" id="fixedbutton3"></a>
-    <div class="container-placer">
-        <div class="embed-container">
-            <iframe id='sequencing' src=''></iframe>
-        </div>
+    #fixedbutton4 {
+        position: fixed;
+        height: 60px;
+        top: 110px;
+        right: 40px;
+        z-index: 4;
+    }
+</style>
+
+<!--FONTS-->
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<!--JQUARY-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+
+<head>
+    <!-- <div class="grid-container">
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+        <div class="grid-item"> <button class="gameButton">gallery test</button> </div>
+    </div>
+    -->
+    <div class="multiPurposeContainer" id = "Menue">
+        <button class="gameButton" id="1">Shean , </button>
+        <button class="gameButton" id="2">Giller , </button>
+        <button class="gameButton" id="3">Sarah , </button>
+        <button class="gameButton" id="4">Michael , </button>
+        <button class="gameButton" id="5">Judy , </button>
+        <button class="gameButton" id="6">Jim , </button>
+        <button class="gameButton" id="7">Janice , </button>
+        <button class="gameButton" id="8">Jack , </button>
+        <button class="gameButton" id="9">gallery test , </button>
+        <button class="gameButton" id="10">gallery test , </button>
+        <button class="gameButton" id="11">gallery test , </button>
+        <button class="gameButton" id="12">gallery test , </button>
+        <button class="gameButton" id="13">gallery test , </button>
+        <button class="gameButton" id="14">gallery test , </button>
+        <button class="gameButton" id="15">gallery test , </button>
+        <button class="gameButton" id="16">gallery test , </button>
+        <button class="gameButton" id="17">gallery test , </button>
+        <button class="gameButton" id="18">gallery test , </button>
+        <button class="gameButton" id="19">test-poparc , </button>
+        <button class="gameButton" id="20">gallery test , </button>
+
     </div>
 
-   
-   <script>
+
+</head>
+<a href="#head"><img src="closeIcon.png" id="fixedbutton4"></a>
+<a href="#head"><img src="nextIcon.png" id="fixedbutton"></a>
+<a href="#head"><img src="homeIcon.png" id="fixedbutton2"></a>
+<a href="#head"><img src="backIcon.png" id="fixedbutton3"></a>
+<div class="container-placer">
+    <div class="embed-container">
+        <iframe id='sequencing' src=''></iframe>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<script>
+    var color;
+    var colors = ["rgb(194, 0, 0)", "rgb(43, 255, 0)" , "blue", "rgb(183, 0, 255)"];
+    var amountOfColors = colors.length;
+    $(document).ready(function () {
+        $("#fixedbutton4").hide();
+        $("#Menue").hide();
+        $("#fixedbutton2").click(function () {
+            ChangeColors();
+            $("#Menue").show();
+            $("#fixedbutton2").hide();
+            $("#fixedbutton4").show();
+        });
+
+        $("#fixedbutton4").click(function () {
+                $("#Menue").hide();
+                $("#fixedbutton4").hide();
+                $("#fixedbutton2").show();
+                
+        });
+    });
+ 
+    
+    function ChangeColors(){
+        for (i = 1; i <= 20; i++) {
+            var colorTemp = Math.floor(Math.random() * amountOfColors);
+            var idTemp = i.toString();
+
+            document.getElementById(idTemp).style.color = colors[colorTemp];
+
+        }
+    }
+    
+
+</script>
+<script>
 
 
 
-   var sites=['https://i.simmer.io/@zane_mechem/sectioncrawler','https://i.simmer.io/@zane_mechem/test-poparc','https://zanemechem.github.io/gallerytest/index.html','https://planball.github.io/game/'];
-   site=0;
+    var sites = ['https://i.simmer.io/@zane_mechem/sectioncrawler', 'https://i.simmer.io/@zane_mechem/test-poparc', 'https://zanemechem.github.io/gallerytest/index.html', 'https://planball.github.io/game/'];
+    site = 0;
 
-   document.getElementById("fixedbutton").onclick = function() {iSequencer(); resetTimer();};
-   document.getElementById("fixedbutton3").onclick = function() {bSequencer(); resetTimer();};
+    document.getElementById("fixedbutton").onclick = function () { iSequencer(); resetTimer(); };
+    document.getElementById("fixedbutton3").onclick = function () { bSequencer(); resetTimer(); };
 
-   document.getElementById('sequencing').src=sites[0];
 
-    var timerHandle = setTimeout(function(){iSequencer();},50000);
+    //Jump To Game
+    document.getElementById("1").onclick = function () { site = 0; jumpToGame(); resetTimer(); };
+    document.getElementById("2").onclick = function () { site = 1; jumpToGame(); resetTimer(); };
+    document.getElementById("3").onclick = function () { site = 2; jumpToGame(); resetTimer(); };
+    document.getElementById("4").onclick = function () { site = 3; jumpToGame(); resetTimer(); };
+    document.getElementById("5").onclick = function () { site = 4; jumpToGame(); resetTimer(); };
+    document.getElementById("6").onclick = function () { site = 5; jumpToGame(); resetTimer(); };
+    document.getElementById("7").onclick = function () { site = 6; jumpToGame(); resetTimer(); };
+    document.getElementById("8").onclick = function () { site = 7; jumpToGame(); resetTimer(); };
+    document.getElementById("9").onclick = function () { site = 8; jumpToGame(); resetTimer(); };
+    document.getElementById("10").onclick = function () { site = 9; jumpToGame(); resetTimer(); };
+    document.getElementById("11").onclick = function () { site = 10; jumpToGame(); resetTimer(); };
+    document.getElementById("12").onclick = function () { site = 11; jumpToGame(); resetTimer(); };
+    document.getElementById("13").onclick = function () { site = 12; jumpToGame(); resetTimer(); };
+    document.getElementById("14").onclick = function () { site = 13; jumpToGame(); resetTimer(); };
+    document.getElementById("15").onclick = function () { site = 14; jumpToGame(); resetTimer(); };
+    document.getElementById("16").onclick = function () { site = 15; jumpToGame(); resetTimer(); };
+    document.getElementById("17").onclick = function () { site = 16; jumpToGame(); resetTimer(); };
+    document.getElementById("18").onclick = function () { site = 17; jumpToGame(); resetTimer(); };
+    document.getElementById("19").onclick = function () { site = 18; jumpToGame(); resetTimer(); };
+    document.getElementById("20").onclick = function () { site = 19; jumpToGame(); resetTimer(); };
+
+
+    document.getElementById('sequencing').src = sites[0];
+
+    var timerHandle = setTimeout(function () { iSequencer(); }, 50000);
     function resetTimer() {
         window.clearTimeout(timerHandle);
-        timerHandle = setTimeout(function(){iSequencer();},50000);
-        
+        timerHandle = setTimeout(function () { iSequencer(); }, 50000);
+
+
+    }
+    function iSequencer() {
+
+        site++;
+        if (site >= sites.length) { site = 0 };
+        document.getElementById('sequencing').src = sites[site];
+        resetTimer();
+    }
+    function jumpToGame() {
+
+        $(document).ready(function () {
+            $("#fixedbutton4").hide();
+            $("#Menue").hide();
+
+        });
+        if (site >= sites.length) { site = 0 };
+        document.getElementById('sequencing').src = sites[site];
+        resetTimer();
         
     }
-    function iSequencer(){
+    function bSequencer() {
 
-      site++;
-      if (site>=sites.length){site=0};
-      document.getElementById('sequencing').src=sites[site];
-      resetTimer();
+        site--;
+        if (site <= -1) { site = sites.length - 1 };
+        document.getElementById('sequencing').src = sites[site];
+        resetTimer();
     }
-    function bSequencer(){
 
-site--;
-if (site<=-1){site=sites.length-1};
-document.getElementById('sequencing').src=sites[site];
-resetTimer();
-}
-   
 
-   
-   </script>
+
+</script>
