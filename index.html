@@ -144,23 +144,14 @@
         <button class="gameButton" id="2">Bill W , </button>
         <button class="gameButton" id="3">Christine G , </button>
         <button class="gameButton" id="4">Jimmy W , </button>
-        <button class="gameButton" id="5">Shean Su , </button>
-        <button class="gameButton" id="6"> Mason , </button><!--
-        <button class="gameButton" id="7">Test , </button>
-        <button class="gameButton" id="8">Jack , </button>
-        <button class="gameButton" id="9">gallery test , </button>
-        <button class="gameButton" id="10">gallery test , </button>
-        <button class="gameButton" id="11">gallery test , </button>
-        <button class="gameButton" id="12">gallery test , </button>
-        <button class="gameButton" id="13">gallery test , </button>
-        <button class="gameButton" id="14">gallery test , </button>
-        <button class="gameButton" id="15">gallery test , </button>
-        <button class="gameButton" id="16">gallery test , </button>
-        <button class="gameButton" id="17">gallery test , </button>
-        <button class="gameButton" id="18">gallery test , </button>
-        <button class="gameButton" id="19">test-poparc , </button>
-        <button class="gameButton" id="20">gallery test , </button>
-        -->
+        <button class="gameButton" id="5">Shean , </button>
+        <button class="gameButton" id="6">Michael , </button>
+        <button class="gameButton" id="7">Ian C , </button>
+        <button class="gameButton" id="8">Sophia Z , </button>
+        <button class="gameButton" id="9">Leon Z , </button>
+        <button class="gameButton" id="10">Mason , </button>
+      
+
     </div>
 
 
@@ -188,7 +179,7 @@
         $("#fixedbutton4").hide();
         $("#Menue").hide();
         $("#fixedbutton2").click(function () {
-            //ChangeColors();
+            ChangeColors();
             $("#Menue").show();
             $("#fixedbutton2").hide();
             $("#fixedbutton4").show();
@@ -218,7 +209,16 @@
 
 
 
-    var sites = ['https://i.simmer.io/@Selena/floating', 'https://i.simmer.io/@LockLock/project-1', 'https://i.simmer.io/@Christineee/christine','https://i.simmer.io/@Jimmywzh/project-1','https://simmer.io/@Afk_/~5cd33593-630c-60f6-2188-fde7240538b0','https://i.simmer.io/@zane_mechem/shean-game','https://i.simmer.io/@zane_mechem/test-poparc'];
+    var sites = ["https://i.simmer.io/@Selena/floating", 
+                "https://i.simmer.io/@LockLock/project-1", 
+                "https://i.simmer.io/@Christineee/christine",
+                "https://i.simmer.io/@Jimmywzh/project-1", 
+                "https://i.simmer.io/@SHEAN_YUSU/unityproject", 
+                "https://i.simmer.io/@MLi/mli", 
+                "https://i.simmer.io/@Jiffy/bouncy", 
+                "https://i.simmer.io/@Sophia_GG/sophia-unity-project", 
+                "https://i.simmer.io/@LobsterPrin/my-game", 
+                "https://i.simmer.io/@Afk_/~5cd33593-630c-60f6-2188-fde7240538b0"];
     site = 0;
 
     document.getElementById("fixedbutton").onclick = function () { iSequencer(); resetTimer(); };
@@ -232,20 +232,11 @@
     document.getElementById("4").onclick = function () { site = 3; jumpToGame(); resetTimer(); };
     document.getElementById("5").onclick = function () { site = 4; jumpToGame(); resetTimer(); };
     document.getElementById("6").onclick = function () { site = 5; jumpToGame(); resetTimer(); };
-    document.getElementById("7").onclick = function () { site = 6; jumpToGame(); resetTimer(); };/*
+    document.getElementById("7").onclick = function () { site = 6; jumpToGame(); resetTimer(); };
     document.getElementById("8").onclick = function () { site = 7; jumpToGame(); resetTimer(); };
     document.getElementById("9").onclick = function () { site = 8; jumpToGame(); resetTimer(); };
     document.getElementById("10").onclick = function () { site = 9; jumpToGame(); resetTimer(); };
-    document.getElementById("11").onclick = function () { site = 10; jumpToGame(); resetTimer(); };
-    document.getElementById("12").onclick = function () { site = 11; jumpToGame(); resetTimer(); };
-    document.getElementById("13").onclick = function () { site = 12; jumpToGame(); resetTimer(); };
-    document.getElementById("14").onclick = function () { site = 13; jumpToGame(); resetTimer(); };
-    document.getElementById("15").onclick = function () { site = 14; jumpToGame(); resetTimer(); };
-    document.getElementById("16").onclick = function () { site = 15; jumpToGame(); resetTimer(); };
-    document.getElementById("17").onclick = function () { site = 16; jumpToGame(); resetTimer(); };
-    document.getElementById("18").onclick = function () { site = 17; jumpToGame(); resetTimer(); };
-    document.getElementById("19").onclick = function () { site = 18; jumpToGame(); resetTimer(); };
-    document.getElementById("20").onclick = function () { site = 19; jumpToGame(); resetTimer(); };*/
+ 
 
 
     document.getElementById('sequencing').src = sites[0];
